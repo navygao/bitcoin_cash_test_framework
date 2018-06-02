@@ -8,17 +8,6 @@ framework, and defines equivalents of consensus parameters for the test
 framework.
 """
 
-import os
-import re
-
-from test_framework.util import get_srcdir
-
-# Slurp in consensus.h contents
-_consensus_h_fh = open(os.path.join(get_srcdir(), 'src', 'consensus',
-                                    'consensus.h'), 'rt')
-_consensus_h_contents = _consensus_h_fh.read()
-_consensus_h_fh.close()
-
 # This constant is currently needed to evaluate some that are formulas
 ONE_MEGABYTE = 1000000
 
@@ -28,9 +17,7 @@ ONE_MEGABYTE = 1000000
 LEGACY_MAX_BLOCK_SIZE = ONE_MEGABYTE
 
 # Default setting for maximum allowed size for a block, in bytes
-DEFAULT_MAX_BLOCK_SIZE = eval(
-    re.search(r'DEFAULT_MAX_BLOCK_SIZE = (.+);',
-              _consensus_h_contents).group(1))
+DEFAULT_MAX_BLOCK_SIZE = 32 * ONE_MEGABYTE
 
 # The following consensus parameters should not be automatically imported.
 # They *should* cause test failures if application code is changed in ways
