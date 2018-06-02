@@ -1,8 +1,8 @@
 from distutils.core import setup
 
 setup(
-    name='bitcoin-cash-test-framework',
-    version='0.1.0',
+    name='bitcoin_cash_test_framework',
+    version='0.2.0',
     packages=[''],
     url='',
     license='',
