@@ -1,0 +1,1 @@
+# bitcoin_cash_test_framework
