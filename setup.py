@@ -3,10 +3,10 @@ from distutils.core import setup
 setup(
     name='bitcoin_cash_test_framework',
     version='0.2.0',
-    packages=[''],
+    packages=['bitcoin_cash_test_framework'],
     url='',
-    license='',
+    license='MIT License',
     author='sken',
     author_email='',
-    description='bitcoin cash test framework package'
+    description=open('README.md').read()
 )
