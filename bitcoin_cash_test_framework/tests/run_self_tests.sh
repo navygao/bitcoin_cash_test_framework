@@ -4,7 +4,7 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
 # Executes the test framework self-tests located in
-# qa/rpc-tests/test_framework/tests.
+# qa/rpc-tests/bitcoin_cash_test_framework/tests.
 #
 # You should be able to call this script from pretty much anywhere.
 # It takes care of setting up the PYTHONPATH so tests can run.
@@ -33,7 +33,7 @@ fi
 export PYTHONPATH="$PYTHONPATH:$RPC_TESTS_DIR"
 
 # Go to where the tests are located
-cd $RPC_TESTS_DIR/test_framework/tests
+cd $RPC_TESTS_DIR/bitcoin_cash_test_framework/tests
 
 echo "Running test framework self-tests..."
 

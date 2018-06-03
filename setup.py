@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='bitcoin_cash_test_framework',
-    version='0.2.0',
+    version='0.2dev',
     packages=['bitcoin_cash_test_framework'],
     url='',
     license='MIT License',

@@ -8,8 +8,8 @@ This is just to exercise initialize_chain() and some of the node
 start/stop machinery.
 """
 
-from test_framework.test_framework import BitcoinTestFramework
-from test_framework.util import start_node, stop_nodes
+from bitcoin_cash_test_framework.bitcoin_cash_test_framework import BitcoinTestFramework
+from bitcoin_cash_test_framework.util import start_node, stop_nodes
 
 
 # number of nodes to launch

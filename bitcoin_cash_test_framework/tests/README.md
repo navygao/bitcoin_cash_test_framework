@@ -14,5 +14,5 @@ There is also not yet an associated build system (Make) target for running
 these self-tests.
 
 To execute, they need the PYTHONPATH to include the qa/rpc-tests/ folder,
-so that they can import the `test_framework` module and friends.
+so that they can import the `bitcoin_cash_test_framework` module and friends.
 The `run-self-tests.sh` wrapper takes care of that.

@@ -34,9 +34,9 @@ import sys
 import time
 from threading import RLock, Thread
 
-from test_framework.siphash import siphash256
-from test_framework.cdefs import MAX_BLOCK_SIGOPS_PER_MB
-from test_framework.util import hex_str_to_bytes, bytes_to_hex_str, wait_until
+from bitcoin_cash_test_framework.siphash import siphash256
+from bitcoin_cash_test_framework.cdefs import MAX_BLOCK_SIGOPS_PER_MB
+from bitcoin_cash_test_framework.util import hex_str_to_bytes, bytes_to_hex_str, wait_until
 
 BIP0031_VERSION = 60000
 MY_VERSION = 70014  # past bip-31 for ping/pong

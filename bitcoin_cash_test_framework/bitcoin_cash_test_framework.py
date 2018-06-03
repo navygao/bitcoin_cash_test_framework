@@ -87,7 +87,7 @@ class BitcoinTestFramework():
         parser.add_option("--tmpdir", dest="tmpdir",
                           help="Root directory for datadirs")
         parser.add_option("-l", "--loglevel", dest="loglevel", default="INFO",
-                          help="log events at this level and higher to the console. Can be set to DEBUG, INFO, WARNING, ERROR or CRITICAL. Passing --loglevel DEBUG will output all logs to console. Note that logs at all levels are always written to the test_framework.log file in the temporary test directory.")
+                          help="log events at this level and higher to the console. Can be set to DEBUG, INFO, WARNING, ERROR or CRITICAL. Passing --loglevel DEBUG will output all logs to console. Note that logs at all levels are always written to the bitcoin_cash_test_framework.log file in the temporary test directory.")
         parser.add_option("--tracerpc", dest="trace_rpc", default=False, action="store_true",
                           help="Print out all RPC calls as they are made")
         parser.add_option("--portseed", dest="port_seed", default=os.getpid(), type='int',
@@ -160,7 +160,7 @@ class BitcoinTestFramework():
                 # Dump the end of the debug logs, to aid in debugging rare
                 # travis failures.
                 import glob
-                filenames = [self.options.tmpdir + "/test_framework.log"]
+                filenames = [self.options.tmpdir + "/bitcoin_cash_test_framework.log"]
                 filenames += glob.glob(self.options.tmpdir +
                                        "/node*/regtest/debug.log")
                 MAX_LINES_TO_PRINT = 1000
@@ -181,7 +181,7 @@ class BitcoinTestFramework():
             sys.exit(TEST_EXIT_SKIPPED)
         else:
             self.log.error(
-                "Test failed. Test logging available at %s/test_framework.log", self.options.tmpdir)
+                "Test failed. Test logging available at %s/bitcoin_cash_test_framework.log", self.options.tmpdir)
             logging.shutdown()
             sys.exit(TEST_EXIT_FAILED)
 
@@ -357,7 +357,7 @@ class BitcoinTestFramework():
         self.log = logging.getLogger('TestFramework')
         self.log.setLevel(logging.DEBUG)
         # Create file handler to log all messages
-        fh = logging.FileHandler(self.options.tmpdir + '/test_framework.log')
+        fh = logging.FileHandler(self.options.tmpdir + '/bitcoin_cash_test_framework.log')
         fh.setLevel(logging.DEBUG)
         # Create console handler to log messages to stderr. By default this
         # logs only error messages, but can be configured with --loglevel.

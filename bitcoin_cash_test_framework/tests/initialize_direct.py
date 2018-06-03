@@ -6,8 +6,8 @@
 Test the initialize_chain function.
 """
 
-from test_framework.test_framework import BitcoinTestFramework
-from test_framework.util import start_node, stop_nodes, initialize_chain
+from bitcoin_cash_test_framework.bitcoin_cash_test_framework import BitcoinTestFramework
+from bitcoin_cash_test_framework.util import start_node, stop_nodes, initialize_chain
 
 
 # number of nodes to launch
