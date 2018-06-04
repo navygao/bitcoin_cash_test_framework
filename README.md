@@ -1,3 +1,10 @@
+# Installing package
+
+```
+pip install git+https://github.com/floreslorca/bitcoin_cash_test_framework.git
+```
+
+
 # Functional tests
 
 ### Writing Functional Tests
